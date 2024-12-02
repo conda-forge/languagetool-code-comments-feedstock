@@ -1,9 +1,8 @@
 context:
-  name: languagetool-code-comments
   version: 0.6.3
 
 package:
-  name: ${{ name|lower }}
+  name: languagetool-code-comments
   version: ${{ version }}
 
 source:
