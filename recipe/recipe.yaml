@@ -27,7 +27,6 @@ requirements:
     - pkg-config
     - if: osx
         - libiconv  # only used to build a temporary binary
-    - libgit2 <1.9  # only used to build a temporary binary
   host:
     - openssl
 
