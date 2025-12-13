@@ -26,6 +26,7 @@ requirements:
     - make
     - pkg-config
     - libgit2
+    - sed
   host:
     - openssl
 
