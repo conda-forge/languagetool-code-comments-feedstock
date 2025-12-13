@@ -25,9 +25,7 @@ requirements:
     - cargo-bundle-licenses
     - make
     - pkg-config
-    - if: osx
-      then:
-        - libiconv  # only used to build a temporary binary
+    - libgit2
   host:
     - openssl
 
