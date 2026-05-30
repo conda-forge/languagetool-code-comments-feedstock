@@ -6,11 +6,14 @@ package:
   version: ${{ version }}
 
 source:
-  git: https://github.com/dustinblackman/languagetool-code-comments
-  tag: v${{ version }}
+  - git: https://github.com/dustinblackman/languagetool-code-comments
+    tag: v${{ version }}
+    target_directory: src
+  - url: https://github.com/dustinblackman/languagetool-code-comments/archive/refs/tags/v${{ version }}.tar.gz
+    sha256: 5062ce687beb2f4dc676c9b6849a533b65585a540b77527481f472cbfd0506c1
 
 build:
-  number: 0
+  number: 1
   skip: win
 
 requirements:
@@ -21,6 +24,9 @@ requirements:
     - ${{ compiler('rust') }}
     - cargo-bundle-licenses
     - make
+    - pkg-config
+    - libgit2
+    - sed
   host:
     - openssl
 
